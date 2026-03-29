@@ -1,0 +1,152 @@
+/* ── Navigation ── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.2rem var(--section-px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background .4s var(--ease-out), box-shadow .4s var(--ease-out), padding .4s var(--ease-out);
+}
+
+.nav.scrolled {
+  background: var(--ivory);
+  box-shadow: 0 2px 20px rgba(212, 160, 160, .15);
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+}
+
+.nav__logo {
+  font-family: var(--script);
+  font-size: 1.8rem;
+  color: #fff;
+  transition: color .4s var(--ease-out);
+}
+
+.nav.scrolled .nav__logo {
+  color: var(--espresso);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.nav__link {
+  font-family: var(--sans);
+  font-size: .8rem;
+  font-weight: 400;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .85);
+  position: relative;
+  transition: color .3s var(--ease-out);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--blush-lt);
+  transition: width .3s var(--ease-out);
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.nav.scrolled .nav__link {
+  color: var(--warm-brown);
+}
+
+.nav.scrolled .nav__link::after {
+  background: var(--rose);
+}
+
+.nav__cta {
+  font-size: .75rem;
+  padding: .65rem 1.6rem;
+}
+
+.nav.scrolled .nav__cta {
+  background: var(--rose);
+  color: #fff;
+  border-color: var(--rose);
+}
+
+/* Mobile toggle */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: #fff;
+  transition: all .3s var(--ease-out);
+}
+
+.nav.scrolled .nav__toggle span {
+  background: var(--espresso);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav__toggle { display: flex; }
+
+  .nav__links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--ivory);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    transition: right .4s var(--ease-out);
+    box-shadow: -4px 0 30px rgba(0, 0, 0, .1);
+  }
+
+  .nav__links.open {
+    right: 0;
+  }
+
+  .nav__link {
+    color: var(--warm-brown);
+    font-size: .9rem;
+  }
+
+  .nav__cta {
+    background: var(--rose);
+    color: #fff;
+    border-color: var(--rose);
+  }
+
+  .nav__overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(44, 26, 26, .4);
+    z-index: 999;
+  }
+
+  .nav__overlay.active {
+    display: block;
+  }
+}

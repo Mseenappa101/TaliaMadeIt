@@ -1,0 +1,32 @@
+/* ── Design Tokens ── */
+:root {
+  /* Palette */
+  --ivory:        #FAF7F2;
+  --ivory-deep:   #F2EDE5;
+  --ivory-mid:    #EDE5D8;
+  --blush:        #D4A0A0;
+  --blush-lt:     #E8C4C4;
+  --blush-pale:   #F5ECEC;
+  --rose:         #B87070;
+  --rose-dk:      #8C4C4C;
+  --mauve:        #9C7878;
+  --mauve-lt:     #C4A4A4;
+  --champagne:    #D4B896;
+  --dusty-sage:   #9CAF9C;
+  --espresso:     #2C1A1A;
+  --warm-brown:   #6C4C40;
+
+  /* Typography */
+  --serif:  'Cormorant Garamond', Georgia, serif;
+  --script: 'Great Vibes', cursive;
+  --sans:   'Jost', system-ui, sans-serif;
+
+  /* Spacing */
+  --section-py: clamp(4rem, 8vw, 8rem);
+  --section-px: clamp(1.25rem, 5vw, 6rem);
+  --max-w:      1200px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(.25, .46, .45, .94);
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+}

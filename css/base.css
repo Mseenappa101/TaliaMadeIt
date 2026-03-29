@@ -1,0 +1,149 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--sans);
+  font-weight: 300;
+  color: var(--espresso);
+  background: var(--ivory);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul { list-style: none; }
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
+
+p { max-width: 65ch; }
+
+.section-pad {
+  padding: var(--section-py) var(--section-px);
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-family: var(--sans);
+  font-size: .85rem;
+  font-weight: 400;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .9rem 2.2rem;
+  border-radius: 50px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all .35s var(--ease-out);
+}
+
+.btn--primary {
+  background: var(--rose);
+  color: #fff;
+  border-color: var(--rose);
+}
+.btn--primary:hover {
+  background: var(--rose-dk);
+  border-color: var(--rose-dk);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 112, 112, .35);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, .45);
+}
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, .1);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--rose);
+  border-color: var(--rose);
+}
+.btn--outline:hover {
+  background: var(--rose);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 112, 112, .25);
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .8s var(--ease-out), transform .8s var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section eyebrow */
+.eyebrow {
+  font-family: var(--sans);
+  font-size: .75rem;
+  font-weight: 400;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+/* Section divider line */
+.line-accent {
+  width: 1px;
+  height: 50px;
+  background: var(--rose);
+  margin: 0 auto;
+}

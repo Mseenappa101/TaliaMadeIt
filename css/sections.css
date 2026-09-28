@@ -164,14 +164,16 @@
 
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
 }
 
 .service-card {
   background: var(--ivory);
   border-radius: 8px;
-  padding: 2.5rem 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   border: 1px solid var(--ivory-mid);
   transition: transform .35s var(--ease-out), box-shadow .35s var(--ease-out);
@@ -182,9 +184,22 @@
   box-shadow: 0 12px 40px rgba(184, 112, 112, .1);
 }
 
-.service-card__icon {
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
+.service-card__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform .6s var(--ease-out);
+}
+
+.service-card:hover .service-card__img {
+  transform: scale(1.04);
+}
+
+.service-card__body {
+  position: relative;
+  background: var(--ivory);
+  padding: 1.8rem 1.6rem 2.2rem;
+  flex: 1;
 }
 
 .service-card h3 {
@@ -249,7 +264,7 @@
 /* ── CTA Banner ── */
 .cta-banner {
   position: relative;
-  background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=85&fit=crop&crop=center') center/cover no-repeat;
+  background: url('../images/banner.jpg') center/cover no-repeat;
   text-align: center;
   color: #fff;
   overflow: hidden;

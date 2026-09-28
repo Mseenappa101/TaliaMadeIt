@@ -147,3 +147,9 @@ p { max-width: 65ch; }
   background: var(--rose);
   margin: 0 auto;
 }
+
+/* Center short intro lines inside centered section headers */
+[class$="__header"] p {
+  margin-left: auto;
+  margin-right: auto;
+}

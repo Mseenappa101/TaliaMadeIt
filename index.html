@@ -107,7 +107,7 @@
     <div class="container">
       <div class="about__grid">
         <div class="about__image-wrap reveal">
-          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=85&fit=crop&crop=faces" alt="Chef Talia in the kitchen" loading="lazy">
+          <img src="images/salmon-herb.jpg" alt="Herb-crusted salmon, plated by Talia" loading="lazy">
           <div class="about__image-accent"></div>
         </div>
         <div class="about__text reveal">
@@ -131,28 +131,36 @@
       </div>
       <div class="services__grid">
         <div class="service-card reveal">
-          <div class="service-card__icon">🍽</div>
+          <img class="service-card__img" src="images/braise-whipped-potatoes.jpg" alt="Braised beef over whipped potatoes" loading="lazy">
+          <div class="service-card__body">
           <h3>Private Dinner Parties</h3>
           <p>Intimate multi-course meals designed for your guests, from menu curation to tableside service.</p>
           <span class="service-card__tag">2–20 Guests</span>
+          </div>
         </div>
         <div class="service-card reveal">
-          <div class="service-card__icon">🥗</div>
+          <img class="service-card__img" src="images/chicken-sweet-potato-bowls.jpg" alt="Spiced chicken and sweet potato meal prep bowls" loading="lazy">
+          <div class="service-card__body">
           <h3>Weekly Meal Prep</h3>
           <p>Health-forward, perfectly portioned meals delivered to your door — customized to your dietary needs.</p>
           <span class="service-card__tag">Recurring</span>
+          </div>
         </div>
         <div class="service-card reveal">
-          <div class="service-card__icon">✨</div>
+          <img class="service-card__img" src="images/bridal-shower-cake.jpg" alt="Gluten-free bridal shower cake with citrus and greenery" loading="lazy">
+          <div class="service-card__body">
           <h3>Special Events</h3>
           <p>Milestone celebrations, holiday gatherings, and corporate dinners with menus as unique as the occasion.</p>
           <span class="service-card__tag">Custom Menus</span>
+          </div>
         </div>
         <div class="service-card reveal">
-          <div class="service-card__icon">🌿</div>
+          <img class="service-card__img" src="images/nourish-bowl.jpg" alt="Nourish bowl with vegetables and feta" loading="lazy">
+          <div class="service-card__body">
           <h3>Wellness Retreats</h3>
           <p>Full-day or multi-day culinary programs designed around detox, performance, or holistic well-being.</p>
           <span class="service-card__tag">By Inquiry</span>
+          </div>
         </div>
       </div>
     </div>
@@ -475,34 +483,108 @@
         <p class="eyebrow">The Table</p>
         <h2>Plates that <em>speak</em></h2>
       </div>
-      <div class="gallery__grid reveal">
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=85&fit=crop" alt="Colorful plated salad" loading="lazy">
-          <div class="gallery__overlay"><span class="gallery__caption">Seasonal Nourish Bowl</span></div>
-        </div>
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=85&fit=crop" alt="Plated pancakes with berries" loading="lazy">
-          <div class="gallery__overlay"><span class="gallery__caption">Brunch Service</span></div>
-        </div>
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=85&fit=crop" alt="Artisan pizza" loading="lazy">
-          <div class="gallery__overlay"><span class="gallery__caption">Private Event</span></div>
-        </div>
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=800&q=85&fit=crop" alt="Fine dining dessert" loading="lazy">
-          <div class="gallery__overlay"><span class="gallery__caption">Plated Desserts</span></div>
-        </div>
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=85&fit=crop" alt="Elevated comfort food" loading="lazy">
-          <div class="gallery__overlay"><span class="gallery__caption">Comfort Elevated</span></div>
-        </div>
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=85&fit=crop" alt="Fresh ingredients" loading="lazy">
-          <div class="gallery__overlay"><span class="gallery__caption">Fresh & Seasonal</span></div>
-        </div>
+      <div class="gallery__filters reveal" role="tablist" aria-label="Filter gallery">
+        <button class="gallery__filter active" data-filter="all">All</button>
+        <button class="gallery__filter" data-filter="plated">Plated</button>
+        <button class="gallery__filter" data-filter="mealprep">Meal Prep</button>
+        <button class="gallery__filter" data-filter="entertaining">Entertaining</button>
+        <button class="gallery__filter" data-filter="baking">Baking &amp; Desserts</button>
+      </div>
+      <div class="gallery__grid">
+        <figure class="gallery__item" data-cat="plated">
+          <img src="images/salmon-herb.jpg" alt="Herb-Crusted Salmon" loading="lazy">
+          <figcaption class="gallery__caption">Herb-Crusted Salmon</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="entertaining">
+          <img src="images/burrata-prosciutto-peaches.jpg" alt="Burrata, Prosciutto and Stone Fruit" loading="lazy">
+          <figcaption class="gallery__caption">Burrata, Prosciutto &amp; Stone Fruit</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="baking">
+          <img src="images/bridal-shower-cake.jpg" alt="Gluten-Free Bridal Shower Cake" loading="lazy">
+          <figcaption class="gallery__caption">Gluten-Free Bridal Shower Cake</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="mealprep">
+          <img src="images/chicken-sweet-potato-bowls.jpg" alt="Spiced Chicken and Sweet Potato Bowls" loading="lazy">
+          <figcaption class="gallery__caption">Spiced Chicken &amp; Sweet Potato Bowls</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="plated">
+          <img src="images/figs-burrata.jpg" alt="Figs, Tomatoes and Burrata" loading="lazy">
+          <figcaption class="gallery__caption">Figs, Tomatoes &amp; Burrata</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="baking">
+          <img src="images/fruit-tart.jpg" alt="Fresh Fruit Tart" loading="lazy">
+          <figcaption class="gallery__caption">Fresh Fruit Tart</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="plated">
+          <img src="images/braise-whipped-potatoes.jpg" alt="Braised Beef, Whipped Potatoes" loading="lazy">
+          <figcaption class="gallery__caption">Braised Beef, Whipped Potatoes</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="entertaining">
+          <img src="images/family-style-spread.jpg" alt="Family-Style Spread" loading="lazy">
+          <figcaption class="gallery__caption">Family-Style Spread</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="mealprep">
+          <img src="images/red-beans-sausage.jpg" alt="Red Beans and Sausage" loading="lazy">
+          <figcaption class="gallery__caption">Red Beans &amp; Sausage</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="baking">
+          <img src="images/peach-galette.jpg" alt="Peach Galette" loading="lazy">
+          <figcaption class="gallery__caption">Peach Galette</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="plated">
+          <img src="images/citrus-salmon.jpg" alt="Citrus Salmon and Broccolini" loading="lazy">
+          <figcaption class="gallery__caption">Citrus Salmon &amp; Broccolini</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="entertaining">
+          <img src="images/deviled-eggs.jpg" alt="Herbed Deviled Eggs" loading="lazy">
+          <figcaption class="gallery__caption">Herbed Deviled Eggs</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="mealprep">
+          <img src="images/meal-prep-lineup.jpg" alt="Weekly Meal Prep" loading="lazy">
+          <figcaption class="gallery__caption">Weekly Meal Prep</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="baking">
+          <img src="images/brioche.jpg" alt="Braided Brioche" loading="lazy">
+          <figcaption class="gallery__caption">Braided Brioche</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="plated">
+          <img src="images/steak-street-corn.jpg" alt="Steak Chimichurri and Street Corn" loading="lazy">
+          <figcaption class="gallery__caption">Steak Chimichurri &amp; Street Corn</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="mealprep">
+          <img src="images/herb-roasted-chicken.jpg" alt="Herb-Roasted Chicken" loading="lazy">
+          <figcaption class="gallery__caption">Herb-Roasted Chicken</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="baking">
+          <img src="images/cinnamon-rolls.jpg" alt="Cinnamon Rolls" loading="lazy">
+          <figcaption class="gallery__caption">Cinnamon Rolls</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="entertaining">
+          <img src="images/gathering-spread.jpg" alt="Gathering Spread" loading="lazy">
+          <figcaption class="gallery__caption">Gathering Spread</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="mealprep">
+          <img src="images/herb-crusted-fish.jpg" alt="Herb-Crusted Fish" loading="lazy">
+          <figcaption class="gallery__caption">Herb-Crusted Fish</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="baking">
+          <img src="images/cream-puffs.jpg" alt="Cream Puffs" loading="lazy">
+          <figcaption class="gallery__caption">Cream Puffs</figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="mealprep">
+          <img src="images/nourish-bowl.jpg" alt="Nourish Bowl" loading="lazy">
+          <figcaption class="gallery__caption">Nourish Bowl</figcaption>
+        </figure>
       </div>
     </div>
   </section>
+
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <button class="lightbox__nav lightbox__prev" aria-label="Previous photo">&#8249;</button>
+    <figure class="lightbox__figure"><img class="lightbox__img" src="" alt=""><figcaption class="lightbox__caption"></figcaption></figure>
+    <button class="lightbox__nav lightbox__next" aria-label="Next photo">&#8250;</button>
+  </div>
 
 
   <!-- ════════ CTA BANNER ════════ -->
@@ -616,9 +698,7 @@
         <div class="footer__brand-logo">TaliaMadeIt</div>
         <p>Private chef experiences rooted in whole ingredients, intentional flavor, and the belief that every meal should nourish body and soul.</p>
         <div class="footer__social">
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="TikTok">TT</a>
-          <a href="#" aria-label="Pinterest">PI</a>
+          <a href="https://www.instagram.com/taliaskitchxn/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
         </div>
       </div>
 
@@ -668,6 +748,7 @@
   <script src="js/reveal.js"></script>
   <script src="js/menus.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/gallery.js"></script>
 
 </body>
 </html>

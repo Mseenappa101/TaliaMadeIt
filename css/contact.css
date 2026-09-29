@@ -194,3 +194,36 @@
     padding: 1.5rem;
   }
 }
+
+/* Spam trap: hidden from people, visible to bots */
+.form__hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form__optional {
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--mauve-lt);
+}
+
+.form__submit[disabled] {
+  opacity: .65;
+  cursor: wait;
+  transform: none;
+  box-shadow: none;
+}
+
+.form__error {
+  margin-top: .8rem;
+  padding: .7rem 1rem;
+  border-radius: 6px;
+  background: var(--blush-pale);
+  color: var(--rose-dk);
+  font-size: .85rem;
+  text-align: center;
+  max-width: none;
+}

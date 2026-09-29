@@ -640,47 +640,59 @@
         </div>
 
         <div class="reveal">
-          <form id="contactForm" class="contact__form">
+          <form id="contactForm" class="contact__form" name="consultation" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="consultation">
+            <input type="hidden" name="subject" value="New consultation request">
+            <p class="form__hp" aria-hidden="true">
+              <label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
             <div class="form__row">
               <div class="form__group">
                 <label class="form__label" for="name">Name</label>
-                <input class="form__input" type="text" id="name" name="name" placeholder="Your name" required>
+                <input class="form__input" type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
               </div>
               <div class="form__group">
                 <label class="form__label" for="email">Email</label>
-                <input class="form__input" type="email" id="email" name="email" placeholder="your@email.com" required>
+                <input class="form__input" type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
               </div>
             </div>
             <div class="form__row">
               <div class="form__group">
+                <label class="form__label" for="phone">Phone <span class="form__optional">(optional)</span></label>
+                <input class="form__input" type="tel" id="phone" name="phone" placeholder="(555) 555-5555" autocomplete="tel">
+              </div>
+              <div class="form__group">
                 <label class="form__label" for="service">Service</label>
-                <select class="form__select" id="service" name="service">
+                <select class="form__select" id="service" name="service" required>
                   <option value="" disabled selected>Select a service</option>
-                  <option value="dinner">Private Dinner Party</option>
-                  <option value="mealprep">Weekly Meal Prep</option>
-                  <option value="event">Special Event</option>
-                  <option value="wellness">Wellness Retreat</option>
-                  <option value="other">Something Else</option>
+                  <option>Private Dinner Party</option>
+                  <option>Weekly Meal Prep</option>
+                  <option>Special Event</option>
+                  <option>Wellness Retreat</option>
+                  <option>Something Else</option>
                 </select>
               </div>
+            </div>
+            <div class="form__row">
               <div class="form__group">
                 <label class="form__label" for="guests">Number of Guests</label>
                 <input class="form__input" type="text" id="guests" name="guests" placeholder="e.g. 6–8">
               </div>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="date">Preferred Date</label>
-              <input class="form__input" type="date" id="date" name="date">
+              <div class="form__group">
+                <label class="form__label" for="date">Preferred Date</label>
+                <input class="form__input" type="date" id="date" name="date">
+              </div>
             </div>
             <div class="form__group">
               <label class="form__label" for="message">Tell Me About Your Vision</label>
               <textarea class="form__textarea" id="message" name="message" placeholder="Dietary needs, occasion, style preferences..." rows="5"></textarea>
             </div>
             <button type="submit" class="btn btn--primary form__submit">Send Inquiry</button>
+            <p class="form__error" role="alert" hidden>Your inquiry didn't go through. Check your connection and try again, or email hello@taliamadeit.com.</p>
             <p class="form__note">I'll respond within 24–48 hours with a custom proposal.</p>
           </form>
 
-          <div class="form__success">
+          <div class="form__success" role="status" aria-live="polite">
             <div class="form__success-icon">✨</div>
             <h3>Thank you!</h3>
             <p>Your inquiry has been received. I'll be in touch within 24–48 hours to discuss your experience.</p>
